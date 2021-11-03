@@ -1,0 +1,6 @@
+docker build -t proxy-nginx .
+docker run -it -d -p 18080:18080 --name proxy-nginx proxy-nginx /bin/bash
+docker exec -it proxy-nginx /bin/bash
+docker start proxy-nginx
+
+docker stop proxy-nginx && docker rm proxy-nginx
